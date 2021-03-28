@@ -59,18 +59,21 @@ let obj = {
           apple: "sweet",
 }
 
-function giveMeFive(input){
+function giveMeFive(obj){
           let arr = [];
 
-          for(key in input) {
+          for(key in obj) {
 
                     // if(key.length == 5){
                     //           arr.push(key)
-                    // }else if(input[key].length == 5){
-                    //           arr.push(input[key])
+                    // }
+                    
+                    // if(obj[key].length == 5){
+                    //           arr.push(obj[key])
                     // }
 
-                    key.length == 5 ? arr.push(key) : input[key].length == 5 ?  arr.push(input[key]) : null;
+                    key.length == 5 ? arr.push(key) : null
+                    obj[key].length == 5 ?  arr.push(obj[key]) : null;
           }
           
           return arr;
